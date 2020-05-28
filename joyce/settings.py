@@ -25,7 +25,7 @@ SECRET_KEY = 'ryzqkwglox7bctc%ia15q%mv6$y&lrmz&v1@l=iar187u4nxid'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['joyce-web.herokuapp.com']
 
 
 # Application definition
