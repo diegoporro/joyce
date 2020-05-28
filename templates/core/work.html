@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Work Experience{% endblock %}
+
+
+{% block work %}
+    <section class="hero-wrap" style="background-image: url({% static 'core/images/bg_4.jpg' %});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters text align-items-end justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-8 ftco-animate text-center">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span></p>
+                    <h1 class="mb-5 bread">Work Experience</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row d-flex">
+                {% for job in jobs %}
+                    <div class="col-md-12 ftco-animate">
+                        <div class="blog-entry align-self-stretch d-flex">
+
+                            {% if job.work == 'Architecture' %}
+                                <img href="" class="block-20 order-md-last d-flex justify-content-center align-items-center" style="background-image: url({% static 'core/images/work-6.jpg' %});">
+                            {% endif %}
+                            {% if job.work == 'Photography' %}
+                                <img href="" class="block-20 order-md-last d-flex justify-content-center align-items-center" style="background-image: url({% static 'core/images/bg_1.jpg' %});">
+                            {% endif %}
+                            {% if job.work == 'Freelance' %}
+                                <img href="" class="block-20 order-md-last d-flex justify-content-center align-items-center" style="background-image: url({% static 'core/images/bg_2.jpg' %});">
+                            {% endif %}
+                            {% if job.work == 'Design' %}
+                                <img href="" class="block-20 order-md-last d-flex justify-content-center align-items-center" style="background-image: url({% static 'core/images/bg_3.jpg' %});">
+                            {% endif %}
+
+                            <div class="text p-4 d-block">
+                                <h3 class="heading mt-3"><a>{{job.title}}</a> - <small>{{ job.work }}</small></h3>
+                                <p class="text-justify">{{job.description}}</p>
+                                {% if job.link %}
+                                    <p><a href="{{job.link}}" class="text-secondary">{{job.link}}</a></p>
+                                {% endif %}
+                                <div class="meta mb-3">
+                                    <div><a>{{job.strar_date}} - {{ job.end_date }}</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block year %}
+    {{ year }}
+{% endblock %}

@@ -1,0 +1,154 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block background %}{% static 'core/images/bg_2.jpg' %}{% endblock %}
+
+{% block localtime %}
+    {{ localtime }}
+{% endblock %}
+
+
+{% block carousel %}
+    <section class="home-slider owl-carousel">
+        <a class="slider-item h-25" style="background-image: url({% static 'core/images/bg_1.jpg' %});">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text align-items-end justify-content-center">
+                    <div class="col-md-12 p-md-5" data-scrollax=" properties: { translateY: '70%' }">
+                        <center><h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A R C H I T E C T U R E</h1></center>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="slider-item h-50" style="background-image: url({% static 'core/images/bg_2.jpg' %});">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text align-items-end justify-content-center">
+                    <div class="col-md-12 p-md-5" data-scrollax=" properties: { translateY: '70%' }">
+                        <center><h1 class="mb-5 text-center" data-scrollax="properties: {translateY: '30%', opacity: 1.6}">D E S I G N</h1></center>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="slider-item h-50" style="background-image: url({% static 'core/images/bg_3.jpg' %});">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text align-items-end justify-content-center">
+                    <div class="col-md-12 p-md-5" data-scrollax=" properties: { translateY: '70%' }">
+                        <center><h1 class="mb-5 text-center" data-scrollax="properties: {translateY: '30%', opacity: 1.6}">P H O T O G R A P H Y</h1></center>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+{% endblock %}
+
+{% block about %}
+    <div class="site-section" id="about">
+        <div class="container">
+            <div class="row align-items-stretch">
+                <div class="col-lg-4">
+                    <div class="h-100 bg-white box-29291"><br>
+                        <h2 class="heading-39291 text-justify">Let's know about me</h2>
+                        <p class="text-justify col-lg-10">Architect graduated from Santa maria University in 2019.</p>
+                        <p class="text-justify col-lg-10">Photographer certificated in different courses related to visual arts.
+                            Content creator for social media marketing, with abilities and skills in graphic design fields.</p>
+                        <p class="text-justify col-lg-10">Being part of the team of architects of the firm RM Studio as a designer and designer. In charge of the marketing and photography department.</p>
+                        <img src="{% static 'core/images/NUEVO LOGO1.png' %}" alt="Image" class="img-fluid" width="30%">
+                        <span class="d-block text-dark">Joyce Gonzalez</span>
+                        <span class="d-block text-muted">Architect</span>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="portfolio.html" class="ftco-animate">
+                                <img src="{% static 'core/images/2.png' %}" class="img-fluid" alt="Colorlib Template">
+                            </a><br><br>
+                            <a href="portfolio.html" class="ftco-animate">
+                                <img src="{% static 'core/images/5.png' %}" class="img-fluid" alt="Colorlib Template">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <a href="portfolio.html" class="ftco-animate">
+                                <img src="{% static 'core/images/1.png' %}" class="img-fluid" alt="Colorlib Template">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block services %}
+<section class="ftco-services">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-6 ftco-animate py-5 nav-link-wrap aside-stretch">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <h2 class="mb-5 bread text-light">Services</h2>
+                        <a class="nav-link px-4 active" id="v-pills-master-tab" data-toggle="pill" href="#v-pills-master" role="tab" aria-controls="v-pills-master" aria-selected="true"><span class="mr-3 flaticon-house-plans"></span> Interior Design</a>
+                        <a class="nav-link px-4" id="v-pills-buffet-tab" data-toggle="pill" href="#v-pills-buffet" role="tab" aria-controls="v-pills-buffet" aria-selected="false"><span class="mr-3 flaticon-skyline"></span> Architecture</a>
+                        <a class="nav-link px-4" id="v-pills-fitness-tab" data-toggle="pill" href="#v-pills-fitness" role="tab" aria-controls="v-pills-fitness" aria-selected="false"><span class="mr-3 icon-camera2"></span> Photography</a>
+                        <a class="nav-link px-4" id="v-pills-reception-tab" data-toggle="pill" href="#v-pills-reception" role="tab" aria-controls="v-pills-reception" aria-selected="false"><span class="mr-3 icon-object-group"></span> Graphic Design</a>
+                    </div>
+                </div>
+                <div class="col-md-6 ftco-animate p-4 p-md-5 d-flex align-items-center">
+
+                    <div class="tab-content pl-md-5" id="v-pills-tabContent">
+
+                        <div class="tab-pane fade show active py-5" id="v-pills-master" role="tabpanel" aria-labelledby="v-pills-master-tab">
+                            <span class="icon mb-3 d-block flaticon-house-plans text-secondary"></span>
+                            <h2 class="mb-4 text-secondary">Interior Design</h2>
+                            <p class="text-justify">
+                                We work exclusive ideas and designs, adapting to the client's desire and need.
+                                We also manage construction management service. In this way we guarantee the perfect execution of the project, from its initial design to its completion on site.
+                                We are committed to the result of the work and remain attentive to design trends.
+                                We create spaces of comfort, exclusivity and elegance. Using digital tools like AutoCAD, Revit, Sketchup and V-Ray.
+                            </p>
+                            <p><a href="{% url 'portfolio' %}" class="btn btn-primary px-4 py-3 bg-secondary border-0">Watch my work</a></p>
+                        </div>
+
+                        <div class="tab-pane fade py-5" id="v-pills-buffet" role="tabpanel" aria-labelledby="v-pills-buffet-tab">
+                            <span class="icon mb-3 d-block flaticon-skyline text-secondary"></span>
+                            <h2 class="mb-4 text-secondary">Architecture </h2>
+                            <p class="text-justify">
+                                I offer a wide variety of services related to architectural projects, such as interior design, landscaping, remodeling, residential, commercial, corporate design, etc.
+                                Experience in construction management, drawing plans and budgets. With management of digital tools such as AutoCAD, Revit, Sketchup and V-Ray
+                            </p>
+                            <p><a href="{% url 'portfolio' %}" class="btn btn-primary px-4 py-3 bg-secondary border-0">Watch my work</a></p>
+                        </div>
+
+                        <div class="tab-pane fade py-5" id="v-pills-fitness" role="tabpanel" aria-labelledby="v-pills-fitness-tab">
+                            <span class="icon mb-3 d-block icon-camera2 text-secondary"></span>
+                            <h2 class="mb-4 text-secondary">Photography</h2>
+                            <p class="text-justify">
+                                Professional photography services, both personal and business.
+                                Our goal is not only to offer the highest digital quality of your products, but also to minimize delivery times so that you have your final product as soon as possible.
+                                We also offer photo retouching services with Photoshop post-production. In this service we offer the elimination of funds, cuts, shading, color changes, among others.
+                            </p>
+                            <p><a href="{% url 'portfolio' %}" class="btn btn-primary px-4 py-3 bg-secondary border-0">Watch my work</a></p>
+                        </div>
+
+                        <div class="tab-pane fade py-5" id="v-pills-reception" role="tabpanel" aria-labelledby="v-pills-reception-tab">
+                            <span class="icon mb-3 d-block icon-object-group text-secondary"></span>
+                            <h2 class="mb-4 text-secondary">Graphic Design</h2>
+                            <p class="text-justify">
+                                My goal is to close corporate images for you that reflect the soul of your business. We transfer your competitive advantages to each of our designs and focus on enhancing the value of your brand.
+                                I offer you: corporate, advertising, editorial design, logo creation for your business or personal brand, content for social networks, business cards, commercial pieces, etc. We also have a certificate in digital marketing to boost your personal brand, business or entrepreneurship.
+                                Using digital tools like Illustrator, Photoshop and After Effects.
+                            </p>
+                            <p><a href="{% url 'portfolio' %}" class="btn btn-primary px-4 py-3 bg-secondary border-0">Watch my work</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block year %}
+    {{ year }}
+{% endblock %}

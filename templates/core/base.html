@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}{% endblock %} | Joyce Gonzalez</title>
+
+    <!-- Estilos y fuentes del template  -->
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'core/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'core/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'core/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'core/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'core/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+
+</head>
+
+<body>
+
+<!-- Navegación -->
+<header>
+    <div class="colorlib-navbar text-center">
+        <a class="colorlib-logo" href="{% url 'home' %}"><img src="{% static 'core/images/NUEVO LOGO6.png' %}" width="25%"></a>
+    </div>
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+</header>
+<div class="page">
+    <nav id="colorlib-main-nav" class="border" role="navigation">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+        <div class="js-fullheight colorlib-table">
+            <div class="img" style="background-image: url({% static 'core/images/bg_2.jpg' %});"></div>
+            <div class="colorlib-table-cell js-fullheight">
+                <div class="colorlib-navbar text-center">
+                    <div class="col-md-12 text-center">
+                        <h1 class="mb-4"><img src="{% static 'core/images/NUEVO LOGO6.png' %}" width="25%"></h1>
+                        <ul>
+                            <li><a href="{% url 'home' %}"><span><small>01</small>Home</span></a></li>
+                            <li><a href="{% url 'work' %}"><span><small>02</small>Work</span></a></li>
+                            <li><a href="{% url 'portfolio' %}"><span><small>03</small>Portfolio</span></a></li>
+                            <li><a href="{% url 'contact' %}"><span><small>04</small>Contact</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<!-- Carousel -->
+{% block carousel %}{% endblock %}
+
+<!-- Contenido -->
+{% block about %}{% endblock %}
+
+<!-- Services -->
+{% block services %}{% endblock %}
+
+<!-- Jobs -->
+{% block jobs %}{% endblock %}
+
+<!-- Contact -->
+{% block contact %}{% endblock %}
+
+<!-- Work -->
+{% block work %}{% endblock %}
+
+
+{% if request.path != "/" %}<hr>{% endif %}
+
+<!-- footer -->
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-5 text-center">
+                <div class="ftco-footer-widget mb-3">
+                    <ul class="ftco-footer-social list-unstyled">
+                        <li class="ftco-animate"><a href="https://www.linkedin.com/in/joyce-gonzalez-036032186/" data-toggle="tooltip" title="LinkedIn"><span class="icon-linkedin"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/_joyce.photo/"><span class="icon-instagram" data-toggle="tooltip" title="_joyce.photo"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/joyce_glz/"><span class="icon-instagram" data-toggle="tooltip" title="joyce_glz"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="copyright text-muted">Copyright &copy; {% block year %}{% endblock %} · Joyce Gonzalez</p>
+                <center>
+                    <small>Powered by </small><img src="{% static 'core/img/DP_sinfondo.png' %}" alt="" width="6%">
+                </center>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer -->
+
+<!-- Bootstrap y Javascripts -->
+<script src="{% static 'core/js/jquery.min.js' %}"></script>
+<script src="{% static 'core/js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'core/js/popper.min.js' %}"></script>
+<script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'core/js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'core/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'core/js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'core/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'core/js/aos.js' %}"></script>
+<script src="{% static 'core/js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'core/js/scrollax.min.js' %}"></script>
+<script src="{% static 'core/js/bootstrap-datepicker.js' %}"></script>
+<script src="{% static 'core/js/jquery.timepicker.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="{% static 'core/js/google-map.js' %}"></script>
+<script src="{% static 'core/js/main.js' %}"></script>
+<!-- Bootstrap y Javascripts -->
+
+</body>
+
+</html>
